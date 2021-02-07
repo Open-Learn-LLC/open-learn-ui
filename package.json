@@ -19,6 +19,9 @@
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "@ctrl/ngx-codemirror": "^4.1.0",
+    "codemirror": "^5.59.2",
+    "ngx-monaco-editor": "^10.0.0-beta.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
