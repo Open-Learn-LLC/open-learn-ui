@@ -8,7 +8,7 @@
                 <div class="header">
                     <fa-icon [icon]="faCode"></fa-icon>Login to Open Learn <fa-icon [icon]="faCode"></fa-icon>
                 </div>
-                <form>
+                <form (ngSubmit)="onSubmitLogin()">
                     <div class="field">
                         <span>
                             <fa-icon [icon]="faEnvelope"></fa-icon>
@@ -25,9 +25,11 @@
                     <button type="submit">Log In</button> 
                 </form>
                 <hr>
+                <a href="/signup">Signup Now</a>
                 <div class="error-message" *ngIf="errorMessage">
                     {{ errorMessage }}
                 </div>
+
             </div>
         </div>
     </div>

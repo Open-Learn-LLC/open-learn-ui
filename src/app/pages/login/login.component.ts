@@ -10,11 +10,15 @@ export class LoginComponent implements OnInit {
   faEnvelope = faEnvelope;
   faLock = faLock;
   faCode = faCode;
-  errorMessage: string = "test";
+  errorMessage: string;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmitLogin(){
+    this.onErrorMessage()
   }
 
   onErrorMessage(){
