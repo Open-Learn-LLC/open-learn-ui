@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container">
+    <div class="column">
+
+    </div>
+    <div class="column">
+        <div class="box roboto">
+            <div class="content">
+                <div class="header">
+                    <fa-icon [icon]="faCode"></fa-icon>Login to Open Learn <fa-icon [icon]="faCode"></fa-icon>
+                </div>
+                <form>
+                    <div class="field">
+                        <span>
+                            <fa-icon [icon]="faEnvelope"></fa-icon>
+                        </span>
+                        <input type="email" required placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <span>
+                            <fa-icon [icon]="faLock" style="display: inline;"></fa-icon>
+                        </span>
+                        <input type="password" required placeholder="Password">
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                    <button type="submit">Log In</button> 
+                </form>
+                <hr>
+                <div class="error-message" *ngIf="errorMessage">
+                    {{ errorMessage }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+    
+    </div>
+</div>

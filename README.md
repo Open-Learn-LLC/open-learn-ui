@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Using Font Awesome icons 
+
+In the TS file: 
+```
+import { Component } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+  faCoffee = faCoffee;
+}
+```
+
+In the template:
+```
+<fa-icon [icon]="faCoffee"></fa-icon>
+```
+
+More info on Font Awesome: [Here](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+Font awesome icons: [Here](https://fontawesome.com/icons?d=gallery&s=regular,solid&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.5.0,5.6.0,5.6.1,5.6.3,5.9.0&m=free)

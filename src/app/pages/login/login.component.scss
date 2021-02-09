@@ -1,0 +1,91 @@
+
+
+.form-header {
+    height: 70px;
+}
+
+input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+button {
+    margin-left: 32%;
+}
+
+.content{
+  position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   z-index: 999;
+//   text-align: center;
+//   padding: 60px 32px;
+  width: 80%;
+//   transform: translate(-50%,-50%);
+//   background: rgba(255,255,255,0.04);
+//   box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+.field{
+  position: relative;
+  display: flex;
+  height: 45px;
+  width: 100%;
+  border: solid;
+  background: rgba(255,255,255,0.94);
+  padding-left: 10px;
+  margin-top: 20px;
+}
+.field span{
+  color: #222;
+  width: 40px;
+  line-height: 45px;
+  top: 23px;
+}
+.field input{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+  bottom: 2px
+}
+
+.content button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content .header{
+  font-size: 33px;
+  font-weight: 400;
+  margin: 0 0 35px 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content a {
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.content a:visited {
+    color: black;
+}
+
+.box {
+    height: 350px
+}
+
+.error-message {
+    color: red;
+}
