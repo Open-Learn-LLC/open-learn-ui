@@ -1,48 +1,56 @@
-<div class="background" style="padding: 20px">
+<div class="container l-r-margin background">
+    <div style="padding: 20px">
 
-    <h1>Gallery page for the Open Learn component library and styles.</h1>
-    <p>Currently our main font is Roboto.</p>
-    <h1>This is the what using an h1 tag looks like.</h1>
-    <h2>This is the what using an h2 tag looks like.</h2>
-    <h3>This is the what using an h3 tag looks like.</h3>
-    <h4>This is the what using an h4 tag looks like.</h4>
-    <h5>This is the what using an h5 tag looks like.</h5>
-    <h6>This is the what using an h5 tag looks like.</h6>
-    <p>This is what using a p tag looks like.</p>
-    
-    <div>
-        <h1>General Card</h1>
-        <p>Set color by using color="black" (options: black, blue, teal, brown. Defaults to white)</p>
-        <div>              
-            <label>Size</label>
-            <select class="paper select" (change)="onSizeChanged($event)">
-                <option *ngFor="let option of sizeOptions" [value]="option">{{ option}}</option>
-            </select>
-            <label>Color</label>
-            <select class="paper select" (change)="onColorChanged($event)">
-                <option *ngFor="let option of colorOptions" [value]="option">{{option}}</option>
-            </select>
-        </div>
-        <div class="container">
-            <div class="pillar" style="margin-left: 10%">
-                <app-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
-                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
-                    footer="testing 123"></app-general-card>
+        <h1>Gallery page for the Open Learn component library and styles.</h1>
+        <p>Currently our main font is Roboto.</p>
+        
+        <div>
+            <h2>General Card</h2>
+            <p>Set color by using color="black" (options: black, blue, teal, brown. Defaults to white)</p>
+            <div>              
+                <label>Size</label>
+                <select class="paper select" (change)="onSizeChanged($event)">
+                    <option *ngFor="let option of sizeOptions" [value]="option">{{ option}}</option>
+                </select>
+                <label>Color</label>
+                <select class="paper select" (change)="onColorChanged($event)">
+                    <option *ngFor="let option of colorOptions" [value]="option">{{ option }}</option>
+                </select>
+                <label>Icon</label>
+                <select class="paper select" (change)="onIconChanged($event)">
+                    <option *ngFor="let option of iconOptions" [value]="option">{{ option }}</option>
+                </select>
             </div>
-            <div class="pillar">
-                <h2>Details:</h2>
-                <p>
-                    This card has 4 different sizes and 5 different colors. It also has the option to add an icon to any corner. Change the dropdowns and see the changes in the code. 
-                </p>
-                <div style="display: inline-block;">
-                    <h2>Code:</h2>
-                    <pre><code [highlight]="code"></code></pre>
+            <div class="container">
+                <div class="pillar" style="margin-left: 10%">
+                    <app-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
+                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
+                        footer="testing 123">
+
+                    <fa-icon *ngIf="icon === 'top-left'" class="top-left" size="2x" [icon]="faTimes"></fa-icon>
+                    <fa-icon *ngIf="icon === 'top-right'" class="top-right" size="2x" [icon]="faTimes"></fa-icon>
+                    <fa-icon *ngIf="icon === 'bottom-left'" class="bottom-left" size="2x" [icon]="faTimes"></fa-icon>
+                    <fa-icon *ngIf="icon === 'bottom-right'" class="bottom-right" size="2x" [icon]="faTimes"></fa-icon>
+                    </app-general-card>
+                </div>
+                <div class="pillar">
+                    <h2>Details:</h2>
+                    <p>
+                        This card has 4 different sizes and 5 different colors. It also has the option to add an icon to any corner. Change the dropdowns and see the changes in the code.
+                    </p>
+                    <p>
+                        This component uses ngContent if you want to display custom content.
+                    </p>
+                    <div style="display: inline-block; width: 100%">
+                        <h2>Code:</h2>
+                        <pre><code [highlight]="code"></code></pre>
+                    </div>
                 </div>
             </div>
+            
+            <!-- <fa-icon class="top-right" size="2x" [icon]="faTimes"></fa-icon> -->
+            
+            
         </div>
-        
-        <!-- <fa-icon class="top-right" size="2x" [icon]="faTimes"></fa-icon> -->
-        
-        
     </div>
 </div>
