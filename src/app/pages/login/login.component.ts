@@ -25,4 +25,8 @@ export class LoginComponent implements OnInit {
     this.errorMessage = "Please enter a valid email and password."
   }
 
+  testFunction(){
+    console.log('test')
+  }
+
 }

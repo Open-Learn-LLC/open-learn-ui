@@ -6,14 +6,14 @@
         <div class="box roboto">
             <div class="content">
                 <div class="header">
-                    <fa-icon [icon]="faCode"></fa-icon>Login to Open Learn <fa-icon [icon]="faCode"></fa-icon>
+                    <fa-icon [icon]="faCode"></fa-icon>Log in to Open Learn <fa-icon [icon]="faCode"></fa-icon>
                 </div>
                 <form (ngSubmit)="onSubmitLogin()">
                     <div class="field">
                         <span>
                             <fa-icon [icon]="faEnvelope"></fa-icon>
                         </span>
-                        <input type="email" required placeholder="Email">
+                        <input type="email" name="email" placeholder="Email" ngModel email required>
                     </div>
                     <div class="field">
                         <span>
@@ -29,7 +29,6 @@
                 <div class="error-message" *ngIf="errorMessage">
                     {{ errorMessage }}
                 </div>
-
             </div>
         </div>
     </div>

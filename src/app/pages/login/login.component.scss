@@ -1,4 +1,4 @@
-
+@use 'src/scss_variables/colors';
 
 .form-header {
     height: 70px;
@@ -34,11 +34,16 @@ button {
   width: 100%;
   border: solid;
   background: rgba(255,255,255,0.94);
+  border-color: rgb(175, 175, 175);
   padding-left: 10px;
   margin-top: 20px;
 }
+
+.field:focus {
+  border-color: colors.$base-black;
+}
 .field span{
-  color: #222;
+  color: colors.$base-black;
   width: 40px;
   line-height: 45px;
   top: 23px;
@@ -55,6 +60,12 @@ button {
   font-family: 'Poppins',sans-serif;
   bottom: 2px
 }
+
+// .field input:focus {
+//     border-color: colors.$base-black;
+// }
+
+
 
 .content button {
     margin-top: 20px;
@@ -79,7 +90,7 @@ button {
 }
 
 .content a:visited {
-    color: black;
+    color: colors.$base-black;
 }
 
 .box {

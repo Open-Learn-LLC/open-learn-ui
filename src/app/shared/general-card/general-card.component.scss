@@ -1,0 +1,94 @@
+@use 'src/scss_variables/colors';
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.small {
+    height: 200px;
+    width: 150px;
+}  
+
+.medium {
+    height: 300px;
+    width: 250px;
+}
+
+.large {
+    height: 400px;
+    width: 300px;
+}
+
+.xtra-large {
+    height: 600px;
+    width: 400px;
+}
+
+.blue {
+    background-color: colors.$base-blue;
+    color: colors.$base-white;
+}
+
+.black { 
+    background-color: colors.$base-black;
+     color: colors.$base-white;
+}
+
+.teal { 
+    background-color: colors.$base-teal;
+    color: colors.$base-white;
+}
+
+.brown { 
+    background-color: colors.$base-brown;
+    color: colors.$base-white;
+}
+
+.card-padding {
+    padding: 3%
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-weight: 100;
+}
+
+.body {
+    padding-top: 4%;
+    font-size: 1em;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1em;
+}
+
+.icon-top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.icon-bottom-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.icon-top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.icon-bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}

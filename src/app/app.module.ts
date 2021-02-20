@@ -10,6 +10,10 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GeneralCardComponent } from './shared/general-card/general-card.component';
+import { GeneralSelectComponent } from './shared/general-select/general-select.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
@@ -17,16 +21,32 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     SignupComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    GalleryComponent,
+    GeneralCardComponent,
+    GeneralSelectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CodemirrorModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css')
+        }
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

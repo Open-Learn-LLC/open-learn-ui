@@ -44,8 +44,35 @@ export class AppComponent {
 
 In the template:
 ```
-<fa-icon [icon]="faCoffee"></fa-icon>
+<fa-icon [icon]="faCoffee" size="2x"></fa-icon>
 ```
 
 More info on Font Awesome: [Here](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
 Font awesome icons: [Here](https://fontawesome.com/icons?d=gallery&s=regular,solid&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.5.0,5.6.0,5.6.1,5.6.3,5.9.0&m=free)
+
+
+## Scss
+
+Import colors using @use at the top of the file:
+```
+@use 'src/scss_variables/colors';
+```
+and replacing your color with:
+```
+colors.$base-black;
+```
+
+## Using the Roboto font
+
+```
+font-family: 'Roboto', sans-serif;
+```
+
+Font weights: 
+Thin 100
+Thin 100 italic
+Light 300
+Regular 400 **Default** 
+Medium 500
+Bold 700
+Black 900

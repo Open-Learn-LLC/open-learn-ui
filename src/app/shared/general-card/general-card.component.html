@@ -1,0 +1,31 @@
+<div 
+[ngClass]="renderClass()" 
+>
+    <div class="icon-top-right">
+        <ng-content select="fa-icon.top-right"></ng-content>
+    </div>
+    <div class="icon-top-left">
+        <ng-content select="fa-icon.top-left"></ng-content>
+    </div>
+    <div class="title">
+        {{ title }}
+    </div>
+    <div class="subtitle">
+        {{ subtitle }}
+        <ng-content select="div.subtitle"></ng-content>
+    </div>
+    <div class="body">
+        {{ body }}
+        <ng-content></ng-content>
+    </div>
+    <div class="footer">
+        {{ footer }}
+        <ng-content select="div.footer"></ng-content>
+    </div>
+    <div class="icon-bottom-right">
+        <ng-content select="fa-icon.bottom-right"></ng-content>
+    </div>
+    <div class="icon-bottom-left">
+        <ng-content select="fa-icon.bottom-left"></ng-content>
+    </div>
+</div>
