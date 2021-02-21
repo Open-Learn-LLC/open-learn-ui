@@ -8,19 +8,23 @@
         <ng-content select="fa-icon.top-left"></ng-content>
     </div>
     <div class="title">
+        <ng-content select="div.title-before"></ng-content>
         {{ title }}
+        <ng-content select="div.title-after"></ng-content>
     </div>
     <div class="subtitle">
+        <ng-content select="div.subtitle-before"></ng-content>
         {{ subtitle }}
-        <ng-content select="div.subtitle"></ng-content>
+        <ng-content select="div.subtitle-after"></ng-content>
     </div>
     <div class="body">
         {{ body }}
         <ng-content></ng-content>
     </div>
     <div class="footer">
+        <ng-content select="div.footer-before"></ng-content>
         {{ footer }}
-        <ng-content select="div.footer"></ng-content>
+        <ng-content select="div.footer-after"></ng-content>
     </div>
     <div class="icon-bottom-right">
         <ng-content select="fa-icon.bottom-right"></ng-content>

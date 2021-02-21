@@ -10,11 +10,17 @@ export class GalleryComponent implements OnInit {
   faEnvelope = faEnvelope;
   faTimes = faTimes;
   sizeOptions = ['Medium', 'Small', 'Large', 'Xtra-Large']
-  colorOptions = ['Blue', 'Black', 'Teal', 'Brown']
-  iconOptions = ['none', 'top-left', 'top-right', 'bottom-left', 'bottom-right']
   sizeChosen = 'medium';  
+
+  colorOptions = ['Default(white)', 'Blue', 'Black', 'Teal', 'Brown']
   colorChosen = ''; 
+
+  iconOptions = ['none', 'top-left', 'top-right', 'bottom-left', 'bottom-right']
   icon = 'none'
+
+  dottedOptions = ['none', 'footer-before', 'footer-after', 'title-before', 'title-after']
+  dottedClass ='none'
+  
   code: string;
   constructor() { }
 
@@ -37,6 +43,18 @@ export class GalleryComponent implements OnInit {
     this.setCode();
   }
 
+  onDottedChanged(e){
+    this.dottedClass = e.target.value.toLowerCase();
+
+    console.log(this.dottedClass)
+    this.setCode();
+  }
+
+  onSelect(selection: string){
+    this.colorChosen = selection.toLowerCase();
+    this.setCode();
+  }
+
   setCode(){
     let iconHtml: string;
     
@@ -47,6 +65,18 @@ export class GalleryComponent implements OnInit {
     } else {
       iconHtml = ``
     }
+
+    let dottedHtml: string;
+
+    if (this.dottedClass != 'none') {
+      dottedHtml = `
+            <div [class]="${this.dottedClass}">
+                <dotted-divider></dotted-divider>    
+            </div>
+            `
+    } else {
+      dottedHtml = ``
+    }
     
     this.code = `
         <app-general-card 
@@ -56,6 +86,7 @@ export class GalleryComponent implements OnInit {
             subtitle="Testing Subtitle"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
             footer="testing 123">
+            ${dottedHtml}
             ${iconHtml}
         </app-general-card>
   `

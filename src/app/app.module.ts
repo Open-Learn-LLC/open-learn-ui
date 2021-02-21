@@ -14,6 +14,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GeneralCardComponent } from './shared/general-card/general-card.component';
 import { GeneralSelectComponent } from './shared/general-select/general-select.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { DottedDividerComponent } from './shared/dotted-divider/dotted-divider.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     HomeComponent,
     GalleryComponent,
     GeneralCardComponent,
-    GeneralSelectComponent
+    GeneralSelectComponent,
+    DottedDividerComponent
   ],
   imports: [
     BrowserModule,

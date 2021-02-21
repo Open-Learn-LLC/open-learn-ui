@@ -25,26 +25,6 @@
     width: 400px;
 }
 
-.blue {
-    background-color: colors.$base-blue;
-    color: colors.$base-white;
-}
-
-.black { 
-    background-color: colors.$base-black;
-     color: colors.$base-white;
-}
-
-.teal { 
-    background-color: colors.$base-teal;
-    color: colors.$base-white;
-}
-
-.brown { 
-    background-color: colors.$base-brown;
-    color: colors.$base-white;
-}
-
 .card-padding {
     padding: 3%
 }
@@ -66,6 +46,7 @@
 .footer {
     position: absolute;
     bottom: 20px;
+    width: 80%;
     font-size: 1em;
 }
 

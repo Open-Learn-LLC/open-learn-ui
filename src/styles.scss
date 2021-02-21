@@ -78,3 +78,43 @@ h1, h2, h3, h4, h5, h6 {
 label {
     font-family: 'Roboto', sans-serif;
 }
+
+table { 
+    font-family: 'Roboto', sans-serif;
+    border: solid 1px;
+}
+
+.blue {
+    background-color: colors.$base-blue;
+    color: colors.$base-white;
+}
+
+.black { 
+    background-color: colors.$base-black;
+     color: colors.$base-white;
+}
+
+.teal { 
+    background-color: colors.$base-teal;
+    color: colors.$base-white;
+}
+
+.brown { 
+    background-color: colors.$base-brown;
+    color: colors.$base-white;
+}
+
+.tiny-square {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: 2px solid transparent;
+}
+
+.selectable:hover {
+    border: solid 2px #6eb7ff;
+}
+
+.selected {
+     border: solid 2px #6eb7ff;
+}

@@ -2,8 +2,14 @@
     <div style="padding: 20px">
 
         <h1>Gallery page for the Open Learn component library and styles.</h1>
-        <p>Currently our main font is Roboto.</p>
-        
+        <h2>Theme Colors:</h2>
+        <p>Click to select</p>
+        <div class="paper tiny-square selectable" (click)="onSelect('none')"></div>
+        <div class="paper black tiny-square selectable" (click)="onSelect('Black')"></div>
+        <div class="paper blue tiny-square selectable" (click)="onSelect('Blue')"></div>
+        <div class="paper brown tiny-square selectable" (click)="onSelect('Brown')"></div>
+        <div class="paper teal tiny-square selectable" (click)="onSelect('Teal')"></div>
+        <dotted-divider></dotted-divider>
         <div>
             <h2>General Card</h2>
             <p>Set color by using color="black" (options: black, blue, teal, brown. Defaults to white)</p>
@@ -11,10 +17,6 @@
                 <label>Size</label>
                 <select class="paper select" (change)="onSizeChanged($event)">
                     <option *ngFor="let option of sizeOptions" [value]="option">{{ option}}</option>
-                </select>
-                <label>Color</label>
-                <select class="paper select" (change)="onColorChanged($event)">
-                    <option *ngFor="let option of colorOptions" [value]="option">{{ option }}</option>
                 </select>
                 <label>Icon</label>
                 <select class="paper select" (change)="onIconChanged($event)">
@@ -38,18 +40,68 @@
                     <p>
                         This card has 4 different sizes and 5 different colors. It also has the option to add an icon to any corner. Change the dropdowns and see the changes in the code.
                     </p>
-                    <p>
-                        This component uses ngContent if you want to display custom content.
-                    </p>
                     <div style="display: inline-block; width: 100%">
                         <h2>Code:</h2>
                         <pre><code [highlight]="code"></code></pre>
                     </div>
                 </div>
             </div>
-            
-            <!-- <fa-icon class="top-right" size="2x" [icon]="faTimes"></fa-icon> -->
-            
+            <dotted-divider></dotted-divider>
+        <div>
+            <h2>Using ngContent for custom styling and formatting</h2>
+            <p>Set dotted line by using the dropdown.</p>
+            <label>Dotted Line</label>
+            <select class="paper select" (change)="onDottedChanged($event)">
+                <option *ngFor="let option of dottedOptions" [value]="option">{{ option }}</option>
+            </select>
+            <div class="container">
+                <div class="pillar" style="margin-left: 10%">
+                    <app-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
+                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
+                        footer="testing 123">
+                    <div *ngIf="dottedClass === 'footer-before'" class="footer-before">
+                        <dotted-divider></dotted-divider>    
+                    </div>
+                    <div *ngIf="dottedClass === 'footer-after'" class="footer-after">
+                        <dotted-divider></dotted-divider>
+                    </div>
+                    <div *ngIf="dottedClass === 'title-before'" class="title-before">
+                        <dotted-divider></dotted-divider>
+                    </div>
+                    <div *ngIf="dottedClass === 'title-after'" class="title-after">
+                        <dotted-divider></dotted-divider>
+                    </div>
+                    </app-general-card>
+                </div>
+                <div class="pillar">
+                    <h2>Details:</h2>
+                    <p>This component uses ngContent if you want to display custom content. This example shows that you can place content within a div inside the app-general-card with the footer-after, footer-before etc class to render anything within that div in that area of the card.</p>
+                    <p>Of course the doesn't have to be just a dotted line. It could be anything you want.</p>
+                    <div style="display: inline-block; width: 100%">
+                        <h2>Code:</h2>
+                        <pre><code [highlight]="code"></code></pre>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Positions:</td>
+                            <td>title-before</td>
+                            <td>title-after</td>
+                            <td>subtitle-before</td>
+                            <td>subtitle-after</td>
+                            <td>body-before</td>
+                            <td>body-after*</td>
+                            <td>footer-before</td>
+                            <td>footer-after</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                            
+                    </table>
+                    <p>*Defaults to body-after if you don't specify a class</p>
+                </div>
+            </div>
+        </div>
+           <dotted-divider></dotted-divider>
             
         </div>
     </div>
