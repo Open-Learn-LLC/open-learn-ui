@@ -118,3 +118,11 @@ table {
 .selected {
      border: solid 2px #6eb7ff;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+body {
+    background-color: colors.$base-white;
+}

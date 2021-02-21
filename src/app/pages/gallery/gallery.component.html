@@ -1,14 +1,17 @@
 <div class="container l-r-margin background">
     <div style="padding: 20px">
 
-        <h1>Gallery page for the Open Learn component library and styles.</h1>
+        <h1>Open Learn component library documentation.</h1>
+        <p>
+            Welcome to the Open Learn component libary documentation.
+        </p>
         <h2>Theme Colors:</h2>
-        <p>Click to select</p>
-        <div class="paper tiny-square selectable" (click)="onSelect('none')"></div>
-        <div class="paper black tiny-square selectable" (click)="onSelect('Black')"></div>
-        <div class="paper blue tiny-square selectable" (click)="onSelect('Blue')"></div>
-        <div class="paper brown tiny-square selectable" (click)="onSelect('Brown')"></div>
-        <div class="paper teal tiny-square selectable" (click)="onSelect('Teal')"></div>
+        <p>Click to select. Note the change in the code.</p>
+        <div class="paper tiny-square selectable pointer" (click)="onSelect('none')"></div>
+        <div class="paper black tiny-square selectable pointer" (click)="onSelect('Black')"></div>
+        <div class="paper blue tiny-square selectable pointer" (click)="onSelect('Blue')"></div>
+        <div class="paper brown tiny-square selectable pointer" (click)="onSelect('Brown')"></div>
+        <div class="paper teal tiny-square selectable pointer" (click)="onSelect('Teal')"></div>
         <dotted-divider></dotted-divider>
         <div>
             <h2>General Card</h2>
@@ -25,15 +28,15 @@
             </div>
             <div class="container">
                 <div class="pillar" style="margin-left: 10%">
-                    <app-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
+                    <ol-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
                         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
-                        footer="testing 123">
+                        footer="Testing 123">
 
                     <fa-icon *ngIf="icon === 'top-left'" class="top-left" size="2x" [icon]="faTimes"></fa-icon>
                     <fa-icon *ngIf="icon === 'top-right'" class="top-right" size="2x" [icon]="faTimes"></fa-icon>
                     <fa-icon *ngIf="icon === 'bottom-left'" class="bottom-left" size="2x" [icon]="faTimes"></fa-icon>
                     <fa-icon *ngIf="icon === 'bottom-right'" class="bottom-right" size="2x" [icon]="faTimes"></fa-icon>
-                    </app-general-card>
+                    </ol-general-card>
                 </div>
                 <div class="pillar">
                     <h2>Details:</h2>
@@ -56,9 +59,9 @@
             </select>
             <div class="container">
                 <div class="pillar" style="margin-left: 10%">
-                    <app-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
+                    <ol-general-card [size]="sizeChosen" [color]="colorChosen" title="Hello 123" subtitle="Testing Subtitle"
                         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
-                        footer="testing 123">
+                        footer="Testing 123">
                     <div *ngIf="dottedClass === 'footer-before'" class="footer-before">
                         <dotted-divider></dotted-divider>    
                     </div>
@@ -71,7 +74,7 @@
                     <div *ngIf="dottedClass === 'title-after'" class="title-after">
                         <dotted-divider></dotted-divider>
                     </div>
-                    </app-general-card>
+                    </ol-general-card>
                 </div>
                 <div class="pillar">
                     <h2>Details:</h2>
@@ -93,16 +96,13 @@
                             <td>footer-before</td>
                             <td>footer-after</td>
                         </tr>
-                        <tr>
-                        </tr>
-                            
                     </table>
                     <p>*Defaults to body-after if you don't specify a class</p>
                 </div>
             </div>
         </div>
            <dotted-divider></dotted-divider>
-            
         </div>
     </div>
+    <ol-notifier color="teal">Congrats you've opened a notifier!</ol-notifier>
 </div>

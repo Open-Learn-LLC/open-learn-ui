@@ -15,6 +15,7 @@ import { GeneralCardComponent } from './shared/general-card/general-card.compone
 import { GeneralSelectComponent } from './shared/general-select/general-select.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { DottedDividerComponent } from './shared/dotted-divider/dotted-divider.component';
+import { OlNotifierComponent } from './shared/ol-notifier/ol-notifier.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DottedDividerComponent } from './shared/dotted-divider/dotted-divider.c
     GalleryComponent,
     GeneralCardComponent,
     GeneralSelectComponent,
-    DottedDividerComponent
+    DottedDividerComponent,
+    OlNotifierComponent
   ],
   imports: [
     BrowserModule,

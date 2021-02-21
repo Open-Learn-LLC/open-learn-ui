@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-general-select',
+  selector: 'ol-general-select',
   templateUrl: './general-select.component.html',
   styleUrls: ['./general-select.component.scss']
 })

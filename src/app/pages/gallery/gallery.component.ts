@@ -79,16 +79,16 @@ export class GalleryComponent implements OnInit {
     }
     
     this.code = `
-        <app-general-card 
+        <ol-general-card 
             size="${this.sizeChosen}" 
             color="${this.colorChosen}"
             title="Hello 123" 
             subtitle="Testing Subtitle"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod teat cupidatat non proident, sunt in c."
-            footer="testing 123">
+            footer="Testing 123">
             ${dottedHtml}
             ${iconHtml}
-        </app-general-card>
+        </ol-general-card>
   `
   }
 

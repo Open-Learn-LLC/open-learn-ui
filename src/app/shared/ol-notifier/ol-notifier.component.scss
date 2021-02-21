@@ -1,0 +1,23 @@
+.notifier {
+    position: fixed;
+    transition: all 0.8s;
+    bottom: -250px;
+    width: 350px;
+    height: 50px;
+    left: 10px;
+    border-radius: 14px;
+    transform: 0px;
+}
+.open {
+    bottom: 10px;
+}
+
+.content {
+    margin: 14px;
+}
+
+.xIcon {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+}
